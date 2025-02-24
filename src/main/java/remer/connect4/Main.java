@@ -8,22 +8,22 @@ public class Main
         System.out.println(board);
 
         // Test inserting pieces
-        board.Insert(0, 'X');
-        board.Insert(0, 'O');
-        board.Insert(1, 'X');
-        board.Insert(1, 'O');
-        board.Insert(2, 'X');
-        board.Insert(2, 'X');
-        board.Insert(3, 'X'); // This should create a horizontal win for 'X'
+        board.insert(0, 'X');
+        board.insert(0, 'O');
+        board.insert(1, 'X');
+        board.insert(1, 'O');
+        board.insert(2, 'X');
+        board.insert(2, 'X');
+        board.insert(3, 'X'); // This should create a horizontal win for 'X'
         System.out.println(board);
 
         // Test CalculateWinner
-        Character winner = board.CalculateWinner();
+        Character winner = board.calculateWinner();
         System.out.println("Winner: " + (winner != null ? winner : "None"));
 
         // Test IsFull
-        System.out.println("Is column 0 full? " + board.IsFull(0));
-        System.out.println("Is column 3 full? " + board.IsFull(3));
+        System.out.println("Is column 0 full? " + board.isFull(0));
+        System.out.println("Is column 3 full? " + board.isFull(3));
     }
 }
 

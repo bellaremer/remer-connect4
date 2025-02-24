@@ -9,7 +9,7 @@ public class ConnectBoardTest
     public void Insert()
     {
         ConnectBoard board = new ConnectBoard(7, 6);
-        board.Insert(3, 'X');
+        board.insert(3, 'X');
 
         assertEquals('X', board.toString().split("\n")[5].charAt(3));
     }
@@ -18,12 +18,12 @@ public class ConnectBoardTest
     public void CalculateWinner()
     {
         ConnectBoard board = new ConnectBoard(7, 6);
-        board.Insert(0, 'X');
-        board.Insert(1, 'X');
-        board.Insert(2, 'X');
-        board.Insert(3, 'X');
+        board.insert(0, 'X');
+        board.insert(1, 'X');
+        board.insert(2, 'X');
+        board.insert(3, 'X');
 
-        assertEquals(Character.valueOf('X'), board.CalculateWinner());
+        assertEquals(Character.valueOf('X'), board.calculateWinner());
     }
 
     @Test
@@ -32,10 +32,10 @@ public class ConnectBoardTest
         ConnectBoard board = new ConnectBoard(7, 6);
         for (int i = 0; i < 6; i++)
         {
-            board.Insert(3, 'O');
+            board.insert(3, 'O');
         }
 
-        assertTrue(board.IsFull(3));
-        assertFalse(board.IsFull(2));
+        assertTrue(board.isFull(3));
+        assertFalse(board.isFull(2));
     }
 }
