@@ -1,12 +1,13 @@
+package remer.connect4;
+
 import org.junit.jupiter.api.Test;
-import remer.connect4.ConnectBoard;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class ConnectBoardTest
 {
     @Test
-    public void Insert()
+    public void insert()
     {
         ConnectBoard board = new ConnectBoard(7, 6);
         board.insert(3, 'X');
@@ -15,7 +16,7 @@ public class ConnectBoardTest
     }
 
     @Test
-    public void CalculateWinner()
+    public void calculateWinner()
     {
         ConnectBoard board = new ConnectBoard(7, 6);
         board.insert(0, 'X');
@@ -27,7 +28,7 @@ public class ConnectBoardTest
     }
 
     @Test
-    public void IsFull()
+    public void isFull()
     {
         ConnectBoard board = new ConnectBoard(7, 6);
         for (int i = 0; i < 6; i++)
