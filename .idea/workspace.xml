@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="335743af-fc84-4518-86ce-e977e57ca147" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/remer/connect4/ConnectBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/remer/connect4/ConnectBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ConnectBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ConnectBoardTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="335743af-fc84-4518-86ce-e977e57ca147" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -194,7 +190,7 @@
       <workItem from="1740422395182" duration="979000" />
       <workItem from="1740426458513" duration="219000" />
       <workItem from="1740429868082" duration="796000" />
-      <workItem from="1740497180436" duration="314000" />
+      <workItem from="1740497180436" duration="616000" />
     </task>
     <servers />
   </component>

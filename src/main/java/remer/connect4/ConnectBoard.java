@@ -78,7 +78,7 @@ public class ConnectBoard
         {
             int newRow = row + i * deltaRow; // Calculate new row index
             int newCol = col + i * deltaCol; // Calculate new column index
-            if (newRow < 0 || newRow >= height || newCol < 0 || newCol >= width || board[newCol][newRow] != color) // Corrected indexing
+            if (newRow < 0 || newRow >= height || newCol < 0 || newCol >= width || board[newCol][newRow] != color)
             {
                 return false; // Return false if any condition fails
             }
