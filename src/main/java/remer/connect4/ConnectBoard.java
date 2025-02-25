@@ -58,8 +58,10 @@ public class ConnectBoard
             for (int c = 0; c < width; c++)
             {
                 char color = board[c][r];
-                if (color != ' ' && (checkDirection(c, r, 1, 0) || checkDirection(c, r, 0, 1)
-                        || checkDirection(c, r, 1, 1) || checkDirection(c, r, 1, -1)))
+                if (color != ' ' && (checkDirection(c, r, 1, 0)
+                        || checkDirection(c, r, 0, 1)
+                        || checkDirection(c, r, 1, 1)
+                        || checkDirection(c, r, 1, -1)))
                 {
                     return color;
                 }
