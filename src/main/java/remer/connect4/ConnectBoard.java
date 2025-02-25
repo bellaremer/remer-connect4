@@ -41,16 +41,15 @@ public class ConnectBoard
 
         for (int row = height - 1; row >= 0; row--)
         {
-            if (board[row][column] == ' ')
+            if (board[column][row] == ' ')      // indexing
             {
-                board[row][column] = color;
+                board[column][row] = color;
                 return;
             }
         }
     }
 
     // Returns the color of the winning player if there is one
-    // Loops through the board to find if anyone has won the game
     public Character calculateWinner()
     {
         // Check for horizontal, vertical, or diagonal win
@@ -58,8 +57,9 @@ public class ConnectBoard
         {
             for (int c = 0; c < width; c++)
             {
-                char color = board[r][c];
-                if (color != ' ' && (checkDirection(r, c, 1, 0) || checkDirection(r, c, 0, 1) || checkDirection(r, c, 1, 1) || checkDirection(r, c, 1, -1)))
+                char color = board[c][r];
+                if (color != ' ' && (checkDirection(c, r, 1, 0) || checkDirection(c, r, 0, 1)
+                        || checkDirection(c, r, 1, 1) || checkDirection(c, r, 1, -1)))
                 {
                     return color;
                 }
@@ -69,14 +69,14 @@ public class ConnectBoard
     }
 
     // Method to help with checking the direction for a win
-    private boolean checkDirection(int row, int col, int deltaRow, int deltaCol)
+    private boolean checkDirection(int col, int row, int deltaRow, int deltaCol)
     {
-        char color = board[row][col]; // Get the color at the starting position
+        char color = board[col][row]; // Get the color at the starting position
         for (int i = 1; i < 4; i++)
         {
             int newRow = row + i * deltaRow; // Calculate new row index
             int newCol = col + i * deltaCol; // Calculate new column index
-            if (newRow < 0 || newRow >= height || newCol < 0 || newCol >= width || board[newRow][newCol] != color)
+            if (newRow < 0 || newRow >= height || newCol < 0 || newCol >= width || board[newCol][newRow] != color) // Corrected indexing
             {
                 return false; // Return false if any condition fails
             }
@@ -91,7 +91,7 @@ public class ConnectBoard
         {
             return false;
         }
-        return board[0][column] != ' ';
+        return board[column][0] != ' ';
     }
 
     // Returns a string that is a visual representation of the board
@@ -99,11 +99,11 @@ public class ConnectBoard
     public String toString()
     {
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < height; i++)
+        for (int i = height - 1; i >= 0; i--) // Iterate from top row to bottom
         {
             for (int j = 0; j < width; j++)
             {
-                sb.append(board[i][j]).append(" ");
+                sb.append(board[j][i]).append(" ");
             }
             sb.append("\n");
         }

@@ -12,7 +12,8 @@ public class ConnectBoardTest
         ConnectBoard board = new ConnectBoard(7, 6);
         board.insert(3, 'X');
 
-        assertEquals('X', board.toString().split("\n")[5].charAt(3));
+        // Check the bottom row (index 0) for column 3 (index 3)
+        assertEquals('X', board.toString().split("\n")[0].charAt(3 * 2)); // Multiply by 2 for spacing
     }
 
     @Test
