@@ -13,7 +13,6 @@ public class ConnectBoard
         this.height = height;
         board = new char[width][height];
 
-        // Fill the board with empty spots represented by ' '
         for (int i = 0; i < width; i++)
         {
             for (int j = 0; j < height; j++)
@@ -26,7 +25,6 @@ public class ConnectBoard
     // Inserts one chip of the specified color into the specified column
     public void insert(int column, char color)
     {
-        // Check if the column is valid (if the player is within the amount of columns)
         if (column < 0 || column >= width)
         {
             System.out.println("Invalid column, try again");
@@ -41,7 +39,7 @@ public class ConnectBoard
 
         for (int row = height - 1; row >= 0; row--)
         {
-            if (board[column][row] == ' ')      // indexing
+            if (board[column][row] == ' ')
             {
                 board[column][row] = color;
                 return;
@@ -50,9 +48,9 @@ public class ConnectBoard
     }
 
     // Returns the color of the winning player if there is one
+    // Check for horizontal, vertical, or diagonal win
     public Character calculateWinner()
     {
-        // Check for horizontal, vertical, or diagonal win
         for (int r = 0; r < height; r++)
         {
             for (int c = 0; c < width; c++)
@@ -73,14 +71,14 @@ public class ConnectBoard
     // Method to help with checking the direction for a win
     private boolean checkDirection(int col, int row, int deltaRow, int deltaCol)
     {
-        char color = board[col][row]; // Get the color at the starting position
+        char color = board[col][row];
         for (int i = 1; i < 4; i++)
         {
-            int newRow = row + i * deltaRow; // Calculate new row index
-            int newCol = col + i * deltaCol; // Calculate new column index
+            int newRow = row + i * deltaRow;
+            int newCol = col + i * deltaCol;
             if (newRow < 0 || newRow >= height || newCol < 0 || newCol >= width || board[newCol][newRow] != color)
             {
-                return false; // Return false if any condition fails
+                return false;
             }
         }
         return true;
@@ -101,7 +99,7 @@ public class ConnectBoard
     public String toString()
     {
         StringBuilder sb = new StringBuilder();
-        for (int i = height - 1; i >= 0; i--) // Iterate from top row to bottom
+        for (int i = height - 1; i >= 0; i--)
         {
             for (int j = 0; j < width; j++)
             {
@@ -109,6 +107,6 @@ public class ConnectBoard
             }
             sb.append("\n");
         }
-        return sb.toString(); // Return the final string representation of the board
+        return sb.toString();
     }
 }

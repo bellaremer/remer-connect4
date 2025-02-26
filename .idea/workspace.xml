@@ -55,6 +55,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/remer/connect4" />
+    </key>
+  </component>
   <component name="RunManager" selected="Gradle.ConnectBoardTest">
     <configuration name="ConnectBoardTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -191,6 +196,7 @@
       <workItem from="1740426458513" duration="219000" />
       <workItem from="1740429868082" duration="796000" />
       <workItem from="1740497180436" duration="616000" />
+      <workItem from="1740498114537" duration="598000" />
     </task>
     <servers />
   </component>
